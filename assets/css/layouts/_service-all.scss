@@ -1,0 +1,94 @@
+.service-all-area{
+    .single-service{
+        background-color: $tab-bg;
+        transition: all .3s ease-in-out;
+        .service-title{
+            h2{
+                @include fonts(32, 700, $tramplate-color, capitalize, 40px);
+                transition: all .3s ease-in-out;
+                padding: 55px 55px 50px 55px;
+
+                @include respond-between(lg,xl) {
+                    @include texts(30,35);
+                }
+                @include respond-between(md, lg) {
+                    @include texts(27,35);
+                    padding: 35px 25px 30px 25px;
+                }
+                @include respond-between(sm, md) {
+                    padding: 45px 45px 10px 45px;
+                    @include texts(28,35);
+                  
+                }
+                @include respond-between(xs, sm) {
+                    padding: 45px 45px 30px 45px;
+                    @include texts(30,35);
+                }
+                @include respond-below(xs) {
+                    @include texts(24, 35);
+                    padding: 30px 45px 00px 45px;
+                }
+            }
+        }
+        .service-widget{
+            .service-icon{
+                .icon{
+    
+                    i{
+                        font-size: 30px;
+                        font-weight: 300;
+                        color: $tramplate-color;
+                        margin: 40px;
+                        transform: rotate(-45deg);
+                        transition: all .3s ease-in-out;
+
+                    }
+                }
+            }
+            .service-num{
+                padding: 10px;
+                span{
+                    @include fonts(170, 500, $service-num, uppercase, 110px);
+                   
+                    @include respond-between(md, lg) {
+                        @include texts(140, 100);
+                    }
+                    @include respond-between(sm, md) {
+                        @include texts(120, 90);
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                        @include texts(120, 100);
+                      
+                    }
+                    @include respond-below(xs) {
+                        @include texts(100, 100);
+                      
+                    }
+                    
+                }
+            }
+        }
+        &:hover {
+            background-color: $main-bg;
+            & .service-title{
+                h2{
+                    color: $white-color;
+                }
+            }
+            & .service-icon{
+                .icon{
+                    i{
+                        transform: rotate(0deg);
+                        color: $white-color;
+                    }
+                }
+            }
+            & .service-num{
+                span{
+                    opacity: .1;
+                }
+            }
+        }
+    }
+}

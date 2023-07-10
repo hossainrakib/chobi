@@ -1,0 +1,41 @@
+.scroll-top-area{
+    bottom: 40px !important;
+    right: 40px !important;
+    left: inherit;
+    .scroll{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: $main-bg;
+
+        @include respond-between(md, lg) {
+        }
+        @include respond-between(sm, md) {
+          
+        }
+        @include respond-between(xs, sm) {
+            height: 30px;
+            width: 30px;
+        }
+        @include respond-below(xs) {
+            height: 20px;
+            width: 20px;
+        }
+        .icon{
+
+            i{
+                font-size: 20px;
+                color: $white-color;
+
+                @include respond-between(xs, sm) {
+                    font-size: 16px;
+
+                }
+                @include respond-below(xs) {
+                    font-size: 14px;
+
+                }
+            }
+        }
+    }
+}

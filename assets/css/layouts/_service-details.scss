@@ -1,0 +1,425 @@
+.service-details-area, .project-details-area{
+    .service-details-left{
+        .search-area{
+            input.form-control{
+                padding: 20px !important;
+
+                @include respond-between(md, lg) {
+                    padding: 15px 10px !important;
+                }
+                @include respond-between(sm, md) {
+                  padding: 15px 20px !important;
+                }
+                @include respond-between(xs, sm) {
+                    padding: 13px 16px !important;
+                  
+                }
+                @include respond-below(xs) {
+                    padding: 10px 20px !important;
+                  
+                }
+            }
+            input.form-control::placeholder{
+                @include fonts(18 !important, 500, $place-color !important, capitalize, 45px !important);
+            }
+            input.form-control:focus{
+                box-shadow: 0px 0px 0px 1px $main-bg;
+            }
+            .icon{
+                right: 20px;
+                transform: translateY(-50%);
+                i{
+                    font-size: 16px;
+                    color: $sub-title-color;
+                }
+            }
+        }
+        .service-catagory{
+            padding: 60px 0;
+
+            @include respond-between(md, lg) {
+                padding: 45px 0;
+            }
+            @include respond-between(sm, md) {
+              padding: 40px 0;
+            }
+            @include respond-between(xs, sm) {
+              padding: 35px 0;
+            }
+            @include respond-below(xs) {
+              padding: 25px 0;
+            }
+            &__title{
+                h2{
+                    @include fonts(32, 700, $tramplate-color, uppercase, 32px);
+                    margin-bottom: 35px;
+
+                    @include respond-between(md, lg) {
+                        font-size: 28px;
+                        margin-bottom: 30px;
+                    }
+                    @include respond-between(sm, md) {
+                      margin-bottom: 25px;
+                    }
+                    @include respond-between(xs, sm) {
+                      margin-bottom: 20px;
+                      font-size: 25px;
+                    }
+                    @include respond-below(xs) {
+                      margin-bottom: 16px;
+                      font-size: 20px;
+                    }
+                }
+            }
+            &__menu{
+                ul{
+                    li{
+                        transition: all .3s ease-in-out;
+                        &.active a{
+                            background-color: $main-bg;
+                            color: $white-color;
+                        }
+                        a{
+                            @include fonts(18, 600, $service-menu, capitalize, 30px);
+                            padding: 20px 0px 20px 30px;
+                            background-color: $tab-bg;
+                            margin-top: 13px !important;
+                            display: block;
+
+                            @include respond-between(md, lg) {
+                                padding: 17px 0 17px 15px;
+                                font-size: 16px;
+                            }
+                            @include respond-between(sm, md) {
+                              padding: 15px 30px;
+                            }
+                            @include respond-between(xs, sm) {
+                              padding: 15px 40px;
+                            }
+                            @include respond-below(xs) {
+                              padding: 12px 0 12px 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .testimonials{
+            .active-service-testimonials{
+                ul.slick-dots{
+                    display: flex;
+                    position: absolute;
+                    bottom: 100px;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    @include respond-between(md, lg) {
+                        bottom: 30px;
+                    }
+                    @include respond-between(sm, md) {
+                        bottom: 25px;
+
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                      bottom: 25px;
+                    }
+                    @include respond-below(xs) {
+                      bottom: 20px;
+                    }
+                    li{
+                        height: 10px;
+                        width: 10px;
+                        border-radius: 50%;
+                        background-color: $white-bg;
+                        margin: 0 4px;
+                        &.slick-active{
+                            background-color: $main-bg
+                        }
+                        button{
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+            &__single{
+                background-color: $footer-bg;
+                padding: 100px 30px;
+
+                @include respond-between(md, lg) {
+                    padding: 30px 15px;
+                }
+                @include respond-between(sm, md) {
+                  padding: 40px 20px
+                }
+                @include respond-between(xs, sm) {
+                  padding: 30px 40px
+                }
+                @include respond-below(xs) {
+                  padding: 25px 10px
+                }
+            }
+            &__disc{
+                p{
+                    @include fonts(25, 500, $white-color, inherit, 30px);
+
+                    @include respond-between(md, lg) {
+                        font-size: 20px
+                    }
+                    @include respond-between(sm, md) {
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                      font-size: 18px;
+                    }
+                    @include respond-below(xs) {
+                      font-size: 17px;
+                      line-height: 25px
+                    }
+                }
+            }
+            &__info{
+                h2{
+                    @include fonts(27, 700, $white-color, capitalize, 52px);
+                    margin-top:20px;
+                    transition: .3s ease-in-out;
+
+                    @include respond-between(md, lg) {
+                        @include texts(23, 40)
+                    }
+                    @include respond-between(sm, md) {
+                        line-height: 35px
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                      line-height: 30px;
+                    }
+                    @include respond-below(xs) {
+                      line-height: 30px;
+                    }
+                }
+            }
+            &__skils{
+                h4{
+                    @include fonts(17, 500, $sub-title-color, inherit, 52px);
+                    margin-bottom: 20px;
+
+                    @include respond-between(md, lg) {
+                        line-height: 35px;
+                    }
+                    @include respond-between(sm, md) {
+                      line-height: 25px;
+                    }
+                    @include respond-between(xs, sm) {
+                      line-height: 30px;
+                    }
+                    @include respond-below(xs) {
+                      line-height: 26px;
+                    }
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                .testimonials__info{
+                    h2{
+                        color: $sub-title-color;
+                    }
+                }
+            }
+        }
+    }
+    .service-details-right, .project-details{
+        .service-details-image{
+            img{
+                
+            }
+        }
+        .service-details-content, .project-details-content{
+            &__title{
+                h2{
+                    @include fonts(40, 700, $tramplate-color, capitalize, 52px);
+                    margin: 40px 0;
+
+                    @include respond-between(md, lg) {
+                        margin: 30px 0;
+                    }
+                    @include respond-between(sm, md) {
+                      margin: 25px 0;
+                    }
+                    @include respond-between(xs, sm) {
+                      margin: 20px 0;
+                      font-size: 30px;
+                    }
+                    @include respond-below(xs) {
+                      margin: 15px 0;
+                      font-size: 20px;
+                      line-height: 30px;
+                      text-align: center;
+                    }
+                }
+                .share-area{
+                    ul.menu-icon{
+                        display: flex;
+                        li{
+                            &:first-child a{
+                                margin-left: 0px !important;
+                            }
+                            a{
+                                font-size: 18px;
+                                line-height: 50px;
+                                 height: 50px;
+                                 width: 50px;
+                                 border-radius: 50%;
+                                 background-color: $tab-bg;
+                                 color: $tramplate-color;
+                                 margin-left: 20px;
+
+                                 @include respond-between(md, lg) {
+                                }
+                                @include respond-between(sm, md) {
+                                    line-height: 40px;
+                                     height: 40px;
+                                     width: 40px;
+                                     font-size: 15px;
+                                  
+                                }
+                                @include respond-between(xs, sm) {
+                                    line-height: 35px;
+                                     height: 35px;
+                                     width: 35px;
+                                     font-size: 15px;
+                                     margin-left: 10px;
+                                     margin-top: 10px;
+                                }
+                                @include respond-below(xs) {
+                                    line-height: 30px;
+                                     height: 30px;
+                                     width: 30px;
+                                    font-size: 14px;
+                                    margin-left: 8px;
+                                }
+                                i{
+
+                                }
+                                &:hover {
+                                    color: $white-color;
+                                    background-color: $tramplate-color
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &__disc{
+                p{
+                    @include para-style;
+
+                    &:last-child{
+                        margin-top: 30px;
+
+                        @include respond-between(md, lg) {
+                            margin: 20px 0px 
+                        }
+                        @include respond-between(sm, md) {
+                          margin: 16px 0;
+                        }
+                        @include respond-between(xs, sm) {
+                            margin: 14px 0;
+                          
+                        }
+                        @include respond-below(xs) {
+                            margin: 12px 0;
+                          
+                        }
+                    }
+                }
+            }
+            &__sub-title{
+                h3{
+                    @include fonts(35, 500, $tramplate-color, inherit, 50px);
+                    margin: 30px 0;
+                    word-spacing: 6px;
+
+                    @include respond-between(md, lg) {
+                        margin: 20px 0;
+                        line-height: 40px;
+                    }
+                    @include respond-between(sm, md) {
+                        font-size: 30px;
+                        line-height: 40px;
+                        word-spacing: 4px;
+                    }
+                    @include respond-between(xs, sm) {
+                      font-size: 30px;
+                      line-height: 35px;
+                      word-spacing: inherit;
+                    }
+                    @include respond-below(xs) {
+                        font-size: 20px;
+                        line-height: 25px;
+                        word-spacing: inherit;
+                    }
+                }
+            }
+            .testimonials-disc{
+                margin: 40px 0;
+
+                @include respond-between(md, lg) {
+                    margin: 30px 0;
+                }
+                @include respond-between(sm, md) {
+                  margin: 26px 0;
+                }
+                @include respond-between(xs, sm) {
+                  margin: 20px 0;
+                }
+                @include respond-below(xs) {
+                  margin: 16px 0;
+                }
+                .quote{
+                    .quote-dis{
+                        p{
+                             @include fonts(32, 500, $white-color, inherit, 40px);
+                             padding: 50px 25px;
+                             z-index: 3;
+
+                             @include respond-between(md, lg) {
+                                 padding: 35px 20px;
+                                 font-size: 25px;
+                            }
+                            @include respond-between(sm, md) {
+                              padding: 40px 20px;
+                              font-size: 25px;
+                            }
+                            @include respond-between(xs, sm) {
+                              padding: 30px 15px;
+                              font-size: 22px;
+                              line-height: 35px;
+                            }
+                            @include respond-below(xs) {
+                              padding: 20px 10px;
+                              font-size: 20px;
+                              line-height: 30px;
+                            }
+                             &::after{
+                                 background-color: $main-bg;
+                                 z-index: -1;
+                                 opacity: .55;
+                             }
+
+
+                        }
+                        .quote-overlay{
+                            .image{
+                                img{
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

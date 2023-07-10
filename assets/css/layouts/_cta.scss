@@ -1,0 +1,28 @@
+.cta-area{
+    .cta-wrapper{
+        .single-cta{
+            z-index: 22;
+            .cta-info{
+                P{
+                    @include fonts(40, 500, $white-color, inherit, 55px);
+
+                    @include respond-between(md, lg) {
+                        @include texts(32, 50)
+                    }
+                    @include respond-between(sm, md) {
+                        @include texts(25, 40)
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                        @include texts(25, 30)
+                      
+                    }
+                    @include respond-below(xs) {
+                        @include texts(22, 28)
+                      
+                    }
+                }
+            }
+        }
+    }
+}

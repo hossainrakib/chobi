@@ -1,0 +1,73 @@
+.page-error-area{
+    .page-error{
+        &__title{
+            h2{
+                @include fonts(60, 700, $socail-title, uppercase,60px);
+
+
+                @include respond-between(md, lg) {
+                    @include texts(55, 60)
+                }
+                @include respond-between(sm, md) {
+                    @include texts(50, 55)
+                    
+                }
+                @include respond-between(xs, sm) {
+                    @include texts(45, 50)
+                  
+                }
+                @include respond-below(xs) {
+                    @include texts(35, 45)
+                  
+                }
+            }
+        }
+        &__disc{
+            p{
+                @include fonts(30, 600, $socail-title, none, 60px);
+                margin-bottom: 60px;
+
+                @include respond-between(md, lg) {
+                }
+                @include respond-between(sm, md) {
+                    @include texts(23, 40);
+                    margin-bottom:45px;
+                }
+                @include respond-between(xs, sm) {
+                    @include texts(20, 35);
+                    margin-bottom: 35px;
+                  
+                }
+                @include respond-below(xs) {
+                    @include texts(14, 30);
+                    margin-bottom: 30px;
+                    
+                }
+            }
+        }
+    }
+    .back-btn{
+        .links{
+            button.btn{
+                a{
+                    i{
+                        left: 10%;
+                
+                        @include respond-between(sm, md) {
+                          left: 7%;
+                        }
+                        @include respond-between(xs, sm) {
+                          left: 5%;
+                        }
+                        @include respond-below(xs) {
+                          left: 4%;
+                        }
+                    }
+                    &:hover i{
+                        left: 3%;
+                    }
+                }
+            }
+        }
+    }
+}

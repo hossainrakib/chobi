@@ -1,0 +1,342 @@
+.blog-details-area{
+    .author{
+        &__info{
+            h2{
+                @include fonts(15, 500, $blog-title, capitalize, 28px);
+                & span{
+                    color: $blog-author-date;
+                    font-weight: 400;
+                }
+            }
+            &__date{
+                ul{
+                    li{
+                        @include fonts(15, 400, $blog-author-date, uppercase, 28px);
+                        padding-left: 30px;
+                        position: relative;
+
+                        &::after{
+                            @include after($list-dot, 5px, 5px,50%, none, 15px, none);
+                            border-radius: 50%;
+                            transform: translateY(-50%);
+                        }
+                         &:last-child{
+                             text-transform: lowercase;
+                         }
+                    }
+                }
+            }
+        }
+        &__disc{
+            p{
+                @include fonts(40, 500, $blog-title, inherit, 50px);
+                margin: 50px 0;
+
+                @include respond-between(md, lg) {
+                    margin: 40px 0;
+                    @include texts(35, 40)
+                }
+                @include respond-between(sm, md) {
+                    margin: 35px 0;
+                    @include texts(30, 35)
+                }
+                @include respond-between(xs, sm) {
+                    margin: 25px 0;
+                    @include texts(25, 30)
+                }
+                @include respond-below(xs) {
+                    margin: 20px 0;
+                    @include texts(18, 25)
+                }
+            }
+        }
+    }
+    .author-wrapper{
+        .author-menu{
+            ul.nav{
+                @include respond-below(xs) {
+                    margin: -10px 0 !important;
+
+                }
+                li.nav-item{
+                    @include respond-below(xs) {
+                        padding: 5px 0;
+
+                    }
+                    button.nav-link{
+                        @include fonts(15, 400, $blog-tab, capitalize, 40px);
+                        padding: 0 35px;
+                        background-color: $tab-bg;
+                        margin: 0 10px;
+
+                        @include respond-between(md, lg) {
+                            padding: 0 30px;
+                            line-height: 36px;
+                        }
+                        @include respond-between(sm, md) {
+                            padding: 0 25px;
+                            line-height: 35px;
+                            margin: 0 7px;
+                        }
+                        @include respond-between(xs, sm) {
+                            padding: 0 20px;
+                            line-height: 33px;
+                            margin: 0 5px;
+                        }
+                        @include respond-below(xs) {
+                            padding: 0 16px;
+                            line-height: 30px;
+                            margin: 0px 8px;
+
+                        }
+                        &.active{
+                            color: $white-color;
+                            background-color: $main-bg;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .blog-details{
+        &__title{
+            h2{
+                @include fonts(28, 600, $blog-title, inherit, 40px);
+                word-spacing: 10px;
+                letter-spacing: 1px;
+
+                @include respond-between(md, lg) {
+                    font-size: 25px;
+                    word-spacing: 5px
+                }
+                @include respond-between(sm, md) {
+                    @include texts (20, 35);
+                    word-spacing: 5px
+                }
+                @include respond-between(xs, sm) {
+                    @include texts (18, 30);
+                    word-spacing: 3px
+                }
+                @include respond-below(xs) {
+                    @include texts (18, 20);
+                    word-spacing: 2px;
+                    letter-spacing: 0;
+                    text-align: center;
+                }
+            }
+        }
+        &__news{
+            height: 270px;
+            background-color: $main-bg;
+
+            @include respond-between(md, lg) {
+               height: 230px;
+
+            }
+            @include respond-between(sm, md) {
+                height: 210px;
+              
+            }
+            @include respond-between(xs, sm) {
+                height: 180px;
+              
+            }
+            @include respond-below(xs) {
+               height: 150px;
+            }
+            &__disc{
+
+                h4{
+                    @include fonts(44, 400, $white-color, lowercase, 60px);
+                    padding: 0 160px;
+
+                    @include respond-between(md, lg) {
+                        font-size: 40px;
+                        padding: 0 120px;
+                    }
+                    @include respond-between(sm, md) {
+                        font-size: 40px;
+                        padding: 0 80px;
+                    }
+                    @include respond-between(xs, sm) {
+                        font-size: 35px;
+                        padding: 0 60px;
+                        line-height: 40px;
+                    }
+                    @include respond-below(xs) {
+                        font-size: 22px;
+                        padding: 0 20px;
+                        line-height: 30px;
+                    }
+                    & span{
+                        font-weight: 700;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+        &__disc{
+            p{
+                @include para-style;
+                line-height: 30px;
+
+                @include respond-between(md, lg) {
+                    line-height: 25px;
+
+                }
+                @include respond-between(sm, md) {
+                    line-height: 20px;
+                  
+                }
+                @include respond-between(xs, sm) {
+                    line-height: 20px;
+                  
+                }
+                @include respond-below(xs) {
+                    line-height: 20px;
+                  
+                }
+            }
+        }
+        .table-wrapper{
+            ul{
+                .table{
+                    padding: 16px 0px 16px 30px;
+                    border: 1px solid $tab-bg;
+                    transition: all .3s ease-in-out;
+                    margin-top: 10px;
+
+                    @include respond-between(md, lg) {
+   
+                    }
+                    @include respond-between(sm, md) {
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                      padding: 14px 0px 14px 20px;
+                    }
+                    @include respond-below(xs) {
+                        padding: 10px 0px 10px 14px;
+                    }
+                 &__icon{
+                     i{
+                        @include fonts(16, 500, $sub-title-color, inherit, 28px);
+
+                        @include respond-below(xs) {
+                            font-size: 13px;
+                            line-height: 22px;
+                        }
+                     }
+                 } 
+                 &__content{
+                     h3{
+                        @include fonts(16, 500, $sub-title-color, inherit, 28px);
+                        margin-left: 20px;
+
+                        @include respond-between(md, lg) {
+                             margin-left: 18px;
+
+                        }
+                        @include respond-between(sm, md) {
+                            margin-left: 16px;
+                          
+                        }
+                        @include respond-between(xs, sm) {
+                            margin-left: 14px;
+                            font-size: 14px;
+                          
+                        }
+                        @include respond-below(xs) {
+                            margin-left: 10px;
+                            font-size: 13px;
+                            line-height: 22px;
+                            text-align: center;
+                        }
+                     }
+                 }
+                 &:hover {
+                        background-color: $tab-bg;
+                     }  
+                }
+            }
+        }
+        .share-area{
+            ul.share-wrapper{
+                padding: 0 70px;
+                height: 80px;
+                border: 1px solid $tab-bg;
+
+                @include respond-between(md, lg) {
+                }
+                @include respond-between(sm, md) {
+                  padding: 0 50px;
+                  height: 70px;
+                }
+                @include respond-between(xs, sm) {
+                    padding: 0 40px;
+                    height: 65px;
+                }
+                @include respond-below(xs) {
+                    padding: 0 20px;
+                    height: 80px;
+                }
+                li{
+                    &:first-child{
+                        @include fonts(21, 600, $share-title, capitalize, 35px);
+
+                        @include respond-below(xs) {
+                            font-size: 16px;
+                        }
+                   } 
+                   .share-icon{
+                       &__single{
+                           margin-left: 15px;
+                           height: 45px;
+                           width: 45px;
+                           border-radius: 10px;
+                           background-color: $tab-bg;
+                           transition: all .3s ease-in-out;
+                           
+                           &:first-child{
+                               margin-left: 0;
+                           }
+                           
+                            @include respond-between(md, lg) {
+                                
+                            }
+                            @include respond-between(sm, md) {
+                                height: 40px;
+                                width: 40px;
+                            }
+                            @include respond-between(xs, sm) {
+                                height: 35px;
+                                width: 35px;
+                            }
+                            @include respond-below(xs) {
+                                height: 30px;
+                                width:  30Px;
+                            }
+                           .icon{
+                               font-size: 14px;
+                               color: $advertisment-color;
+                               transition: all .3s ease-in-out;
+
+                               @include respond-below(xs) {
+                                font-size: 11px;
+                               }
+
+                           }
+                           &:hover {
+                               background-color: $main-bg;
+
+                               .icon{
+                                   color: $white-color;
+                               }
+                           }
+                       }
+                   }
+                }
+            }
+        }
+    }
+}

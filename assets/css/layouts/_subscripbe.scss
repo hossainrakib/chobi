@@ -1,0 +1,55 @@
+.subscripbe-area{
+    transform: translateY(-50%);
+    .subscripbe-wrapper{
+        input.form-control{
+            padding: 40px 50px !important;
+            background-color: $tab-bg ;
+            color: $tramplate-color;
+            @include respond-between(md, lg) {
+            }
+            @include respond-between(sm, md) {
+              padding: 35px 40px !important;
+            }
+            @include respond-between(xs, sm) {
+                padding: 30px 30px !important;
+              
+            }
+            @include respond-below(xs) {
+                padding: 22px 8px !important;
+              
+            }
+        }
+        input.form-control::placeholder{
+            @include fonts(20, 500, $place-color, capitalize, 40px);
+
+            @include respond-below(xs) {
+                font-size: 15px;
+              
+            }
+        }
+        .submit{
+            transform: translateY(-50%);
+            right: 2%;
+
+
+            @include respond-between(xs, sm) {
+                right: 3%;
+             
+            }
+
+            input[type="submit"] {
+                border: none;
+                outline: none;
+
+                @include respond-below(xs) {
+                   font-size: 12px !important;
+                  padding: 0 10px !important;
+                  line-height: 30px !important;
+                }
+                &:hover {
+                    background-color: $white-bg !important;
+                }
+            }
+        }
+    }
+}

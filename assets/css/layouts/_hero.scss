@@ -1,0 +1,123 @@
+.hero-area{
+    .hero{
+        .single-hero{
+            height: 100vh;
+
+            &.height{
+                height: 400px !important;
+
+                @include respond-between(md, lg) {
+
+                }
+                @include respond-between(sm, md) {
+                    height: 350px !important;
+                  
+                }
+                @include respond-between(xs, sm) {
+                     height: 320px !important;
+                  
+                }
+                @include respond-below(xs) {
+                    height: 300px !important;
+                  
+                }
+            }
+            .hero-content{
+                z-index: 22;
+                overflow: hidden;
+                .hero-title{
+                    h1{
+                        @include fonts(50, 600, $white-color, uppercase, 100px);
+                        
+                        
+                        @include respond-between(md, lg) {
+                            @include texts(40, 70)
+                        }
+                        @include respond-between(sm, md) {
+                            @include texts(30, 50)
+                            
+                        }
+                        @include respond-between(xs, sm) {
+                            @include texts(25, 40)
+                            
+                        }
+                        @include respond-below(xs) {
+                            @include texts(20, 30)
+                            
+                        }
+                    }
+                    h2{
+                        @include fonts(120, 600, $white-color, uppercase, 100px);
+                        
+                        
+                        @include respond-between(md, lg) {
+                            @include texts(90, 70)
+                        }
+                        @include respond-between(sm, md) {
+                            @include texts(70, 50)
+                            
+                        }
+                        @include respond-between(xs, sm) {
+                            @include texts(50, 40)
+                            
+                        }
+                        @include respond-below(xs) {
+                            @include texts(35, 30)
+                            
+                        }
+                    }
+                }
+                .banner-btn{
+                    button.btn{
+                        a{
+ 
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .slick-arrow{
+            border: none;
+            outline: none;
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            background-color: $arrow-bg;
+            transition: all .3s ease-in-out;
+            bottom: 0;
+            transform: translateY(50%);
+            right: 13%;
+            position: absolute;
+            font-size: 20px;
+            color: $tramplate-color;
+            z-index: 333;
+            
+            @include respond-between(md, lg) {
+                height: 100px;
+                width: 100px;
+            }
+            @include respond-between(sm, md) {
+                height: 75px;
+                width: 75px;
+            }
+            @include respond-between(xs, sm) {
+                height: 50px;
+                width: 50px;
+                font-size: 17px;
+            }
+            @include respond-below(xs) {
+                height: 40px;
+                width: 40px;
+                font-size: 14px;
+            }
+            &.slick-prev{
+                left: 13% !important;
+            }
+            &:hover {
+                background-color: $hover-color;
+                color: $white-color;
+            }
+        }
+    }
+}

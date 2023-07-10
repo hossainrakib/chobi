@@ -1,0 +1,94 @@
+.quote-area{
+    margin-top: 200px;
+
+    
+    @include respond-between(md, lg) {
+        margin-top:150px;
+    }
+    @include respond-between(sm, md) {
+        margin-top:100px;
+        
+    }
+    @include respond-between(xs, sm) {
+        margin-top:70px;
+        
+    }
+    @include respond-below(xs) {
+        margin-top:40px;
+        
+    }
+    .quote{
+        .quote-dis{
+
+            p{
+                @include fonts(38, 500, $tramplate-color, inherit, 52px);
+                padding: 40px 0px;
+
+                
+                @include respond-between(md, lg) {
+                    padding: 35px 0px;
+                    @include texts(33, 48);
+                }
+                @include respond-between(sm, md) {
+                     padding: 30px 0px;
+                    @include texts(23, 45);
+
+                    
+                }
+                @include respond-between(xs, sm) {
+                    padding: 25px 0px;
+                    @include texts(18, 32);
+
+                    
+                }
+                @include respond-below(xs) {
+                     padding: 20px 0px;
+                    @include texts(15, 20);
+
+                    
+                }
+            }   
+
+        }
+        .tide-info{
+            .tide-person{
+                h2{
+                      @include fonts(35, 600, $tramplate-color, capitalize, 52px);
+
+                      
+                        @include respond-between(md, lg) {
+                            @include texts(30, 45);
+                            
+                        }
+                        @include respond-between(sm, md) {
+                            @include texts(28, 40);
+                            
+                        }
+                        @include respond-between(xs, sm) {
+                            @include texts(25, 35);
+                            
+                        }
+                        @include respond-below(xs) {
+                            @include texts(20, 30);
+                            
+                        }
+
+                }
+            }
+            .tide-skils{
+                h4{
+                    @include fonts(17, 600, $sub-title-color, capitalize, 52px);
+
+                    @include respond-between(xs, sm) {
+                        @include texts(15, 35);
+                        
+                    }
+                    @include respond-below(xs) {
+                        @include texts(15, 30);
+                      
+                    }
+                }
+            }
+        }
+    }
+}

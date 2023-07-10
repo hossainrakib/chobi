@@ -1,0 +1,19 @@
+.location-area{
+    #map{
+        @include respond-between(md, lg) {
+            height: 700px !important;
+        }
+        @include respond-between(sm, md) {
+            height: 600px !important;
+          
+        }
+        @include respond-between(xs, sm) {
+            height: 500px !important;
+          
+        }
+        @include respond-below(xs) {
+            height: 400px !important;
+          
+        }
+    }
+}

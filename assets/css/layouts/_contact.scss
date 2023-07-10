@@ -1,0 +1,236 @@
+.contact-area{
+    .contact{
+        &__btn{
+            button.btn{
+                a{
+                    @include fonts(18, 700, $tramplate-color, uppercase, 50px);
+                    padding: 0 35px;
+                    background-color: $tab-bg;
+
+                    @include respond-between(md, lg) {
+                    }
+                    @include respond-between(sm, md) {
+                      padding: 0 25px;
+                    }
+                    @include respond-between(xs, sm) {
+                      padding: 0 20px;
+                    }
+                    @include respond-below(xs) {
+                      padding: 0 20px;
+                      font-size: 15px;
+                    }
+                }
+            }
+        }
+        &__disc{
+            padding: 50px 0 55px 0;
+            margin-bottom: 60px;
+
+            @include respond-between(md, lg) {
+                padding: 40px 0 45px 0;
+                margin-bottom: 50px;
+            }
+            @include respond-between(sm, md) {
+                padding: 35px 0 40px 0;
+                margin-bottom: 40px;
+              
+            }
+            @include respond-between(xs, sm) {
+                padding: 30px 0 35px 0;
+                margin-bottom: 35px;
+              
+            }
+            @include respond-below(xs) {
+                padding: 30px 0 30px 0;
+                margin-bottom: 30px;
+              
+            }
+            &::after{
+                @include after($main-bg, 5px, 150px, inherit, 0, 0, inherit);
+            }
+            p{
+                @include fonts(38, 500, $tramplate-color, inherit, 52px);
+                
+                @include respond-between(md, lg) {
+                }
+                @include respond-between(sm, md) {
+                    @include texts(33, 45)
+                  
+                }
+                @include respond-between(xs, sm) {
+                    @include texts(30, 40)
+                  
+                }
+                @include respond-below(xs) {
+                    @include texts(20, 30)
+                  
+                }
+
+                & span{
+                    font-weight: 700;
+
+                }
+            }
+        }
+        &__widget{
+            background-color: $tab-bg;
+            transition: all .3s ease-in-out;
+            padding: 35px 0 40px 35px;
+
+            @include respond-between(md, lg) {
+                 padding: 30px 10px 20px 30px;
+
+            }
+            @include respond-between(sm, md) {
+              
+            }
+            @include respond-between(xs, sm) {
+                padding: 30px 10px 20px 30px;
+              
+            }
+            @include respond-below(xs) {
+                padding: 20px 20px 20px 20px;
+              
+            }
+
+            &__count{
+                span{
+                    @include fonts(100, 700, $tramplate-color, capitalize, 140px);
+                    opacity: .2;
+                }
+            }
+            .contact-single{
+                .contact-title{
+                    h3{
+                        @include fonts(18, 700, $sub-title-color, capitalize, 40px);
+                        transition: all .3s ease-in-out;
+
+                        @include respond-below(xs) {
+                            @include texts(16, 30)
+                          
+                        }
+                    }
+                }
+                .contact-info{
+                    p{
+                        @include fonts(18, 600, $contact-info, lowercase, 40px);
+                        transition: all .3s ease-in-out;
+
+                        @include respond-between(md, lg) {
+                            @include texts(15, 30)
+                        }
+                        @include respond-between(sm, md) {
+                          
+                        }
+                        @include respond-below(sm) {
+                            @include texts(15, 30)
+                        }
+   
+                    }
+                }
+            }
+            &:hover {
+                background-color: $main-bg;
+  
+                .contact-title h3{
+                    color: $white-color;
+                }
+                .contact-info p{
+                    color: $white-color;
+
+                }
+            }
+        }
+    }
+    .contact__box{
+        background-color: $tab-bg;
+        padding: 70px;
+
+        @include respond-between(md, lg) {
+        }
+        @include respond-between(sm, md) {
+             padding: 60px;
+          
+        }
+        @include respond-between(xs, sm) {
+            padding: 40px;
+          
+        }
+        @include respond-below(xs) {
+            padding: 40px 20px;
+          
+        }
+        &__email{
+            input.form-control::placeholder{
+                text-transform: capitalize;
+            }
+            input.form-control{
+                @include fonts(20, 500, $place-color, lowercase, 45px);
+                padding: 12px 30px;
+                background-color: $white-bg;
+
+                &:focus{
+                    box-shadow: 0 0 3px 1px $main-bg;
+                }
+                @include respond-between(sm, md) {
+                    padding: 10px 25px;
+                  
+                }
+                @include respond-between(xs, sm) {
+                    padding: 7px 25px;
+                  
+                }
+                @include respond-below(xs) {
+                    padding: 5px 20px;
+                  
+                }
+            }
+        }
+        &__text-area{
+            textarea.form-control{
+                @include fonts(20, 500, $place-color, capitalize, 45px);
+                padding: 12px 30px;
+                background-color: $white-bg;
+                 height: 250px;
+
+                @include respond-between(md, lg) {
+                    height: 185px;
+                }
+                @include respond-between(sm, md) {
+                    height: 200px;
+                    padding: 10px 25px;
+                    
+                }
+                @include respond-between(xs, sm) {
+                    height: 180px;
+                    padding: 7px 25px;
+                  
+                }
+                @include respond-below(xs) {
+                    padding: 5px 20px;
+                    height: 150px;
+                  
+                }
+            }
+        }
+        &__submit{
+            .links{
+                button.btn{
+                    a{
+                        background-color: $main-bg !important;
+                        color: $white-color !important;
+
+                        @include respond-below(xs) {
+                          font-size: 13px;
+                        }
+
+                        &:hover {
+                            background-color: $white-bg !important;
+                            color: $sub-title-color !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

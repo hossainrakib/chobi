@@ -1,0 +1,157 @@
+.project-details-area{
+    .single-img, .all-img{
+        height: 100%;
+        display: block;
+    }
+    .single-img{
+        transition: all .3s ease-in-out !important;
+        @extend .bg-layout;
+        z-index: 1;
+        &::after{
+            background-color: $main-bg;
+            height: 0%;
+            transition: all .3s ease-in-out;
+        }
+        .grid-action{
+            transition: all .3s ease-in-out !important;
+            z-index: 2;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+
+            .zoom-image{
+                a{
+                    .icon{
+                        font-weight: 300;
+                        color: $white-color;
+                        font-size: 30px;
+                        i{
+
+                        }
+                    }
+                }
+            }
+
+        }
+        &:hover .grid-action {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: visible;
+        }
+        &:hover {
+            &::after{
+                height: 100%;
+            }
+        }
+    }
+    .author-testimonials{
+        background-color: $tab-bg;
+        height: 100%;
+        width: 100%;
+        padding: 40px 0 40px 45px;
+
+        @include respond-between(md, lg) {
+            padding: 35px 0 35px 35px;
+        }
+        @include respond-between(sm, md) {
+            padding: 25px 0 25px 25px;
+          
+        }
+        @include respond-between(xs, sm) {
+          
+            padding: 20px 0 20px 20px;
+        }
+        @include respond-below(xs) {
+          
+            padding: 10px 0 10px 10px;
+        }
+        .author{
+            padding-bottom: 25px;
+            @include respond-between(md, lg) {
+            }
+            @include respond-between(sm, md) {
+              padding-bottom: 15px;
+            }
+            @include respond-between(xs, sm) {
+              padding-bottom: 15px;
+            }
+            @include respond-below(xs) {
+                padding-bottom: 15px;
+            }
+            &__title{
+                h4{
+                @include fonts(13, 500, $sub-title-color, uppercase, 15px);
+                margin-bottom: 10px;
+
+                @include respond-between(md, lg) {
+                }
+                @include respond-between(sm, md) {
+                  
+                }
+                @include respond-between(xs, sm) {
+                  margin-bottom: 5px
+                }
+                @include respond-below(xs) {
+                    margin-bottom: 5px
+                }
+                }
+            }
+            &__info{
+                h2{
+                    @include fonts(18, 500, $main-para-color, capitalize, 20px);
+                }
+
+            }
+        }
+    }
+    .project-details-content__disc{
+        p{
+            &:last-child{
+                margin-bottom: 30px !important;
+
+                @include respond-between(md, lg) {
+                margin-bottom: 20px !important;
+
+                }
+                @include respond-between(sm, md) {
+                margin-bottom: px !important;
+
+                  
+                }
+                @include respond-between(xs, sm) {
+                margin-bottom: px !important;
+
+                  
+                }
+                @include respond-below(xs) {
+                margin-bottom: px !important;
+                  
+                }
+            }
+        }
+    }
+    .related-project{
+        &__title{
+            h2{
+                @include fonts(40, 700, $tramplate-color, capitalize, 50px);
+                margin: 100px 0 80px 0;
+
+                @include respond-between(md, lg) {
+                    margin: 80px 0 60px 0;
+                }
+                @include respond-between(sm, md) {
+                    margin: 60px 0 40px 0;
+                  font-size: 35px;
+                }
+                @include respond-between(xs, sm) {
+                    margin: 40px 0 30px 0;
+                    font-size: 30px;
+                }
+                @include respond-below(xs) {
+                    margin: 30px 0 25px 0;
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,319 @@
+.comment-area{
+    .comment{
+        padding: 25px 30px;
+        border: 1px solid $tab-bg;
+
+        @include respond-between(md, lg) {
+        }
+        @include respond-between(sm, md) {
+           padding: 20px 20px;
+
+        }
+        @include respond-between(xs, sm) {
+            padding: 15px 20px;
+          
+        }
+        @include respond-below(xs) {
+            padding: 15px;
+          
+        }
+        &__section{
+            margin-top: 80px;
+
+            @include respond-between(md, lg) {
+                margin-top: 65px
+            }
+            @include respond-between(sm, md) {
+                margin-top: 45px
+              
+            }
+            @include respond-between(xs, sm) {
+                margin-top: 40px
+              
+            }
+            @include respond-below(xs) {
+                margin-top: 30px
+              
+            }
+            &__title{
+                h2{
+                    @include fonts(30, 700, $blog-title, capitalize, 40px);
+                    margin-bottom: 40px;
+
+                    @include respond-between(md, lg) {
+                        margin-bottom: 35px;
+                    }
+                    @include respond-between(sm, md) {
+                        margin-bottom: 30px;
+                        @include texts(26, 35);
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                        margin-bottom: 25px;
+                        @include texts(22, 35)
+
+                      
+                    }
+                    @include respond-below(xs) {
+                        margin-bottom: 20px;
+                        @include texts(20, 35)
+                      
+                    }
+                }
+            }
+
+        }
+        &__author{
+            &__profile{
+                padding-right: 30px;
+
+                @include respond-between(md, lg) {
+                }
+                @include respond-between(sm, md) {
+                  padding-right: 20px;
+                }
+                @include respond-between(xs, sm) {
+                    padding-right: 15px;
+                  
+                }
+                @include respond-below(xs) {
+                    padding-right: 0px;
+                  
+                }
+                .image{
+                    border-radius: 50%;
+                    padding: 10px;
+                    border: 1px solid $tab-bg;
+
+                    @include respond-below(xs) {
+                         padding: 5px;
+         
+                    }
+                    img{
+
+                    }
+                }
+            }
+            &__info{
+                &__title{
+                    h3{
+                         @include fonts(22, 700, $socail-title, capitalize, 60px);
+
+                        @include respond-between(md, lg) {
+                            line-height: 50px;
+                        }
+                        @include respond-between(sm, md) {
+                            line-height: 45px;
+                            
+                        }
+                        @include respond-between(xs, sm) {
+                            @include texts(20, 35);
+                          
+                        }
+                        @include respond-below(xs) {
+                            @include texts(24, 30);
+
+                        }
+                    }
+                }
+                &__skils{
+                    h5{
+                        @include fonts(15, 700, $blog-author-date, capitalize, 30px);
+                        font-family: $second-font;
+
+                        @include respond-between(md, lg) {
+                        }
+                        @include respond-between(sm, md) {
+                             line-height: 22px;
+                        }
+                        @include respond-between(xs, sm) {
+                            line-height: 20px;
+                          
+                        }
+                        @include respond-below(xs) {
+                            line-height: 25px;
+                          
+                        }
+                        span{
+                            color: $sub-title-color;
+                            text-transform: lowercase;
+
+                            @include respond-between(md, lg) {
+                            }
+                            @include respond-between(sm, md) {
+                              display: block;
+                            }
+                            @include respond-between(xs, sm) {
+                                display: block;
+                              
+                            }
+                            @include respond-below(xs) {
+                                display: block;
+                              
+                            }
+                        }
+                    }
+                }
+            }
+            &__reply{
+                .link{
+                    button.btn{
+                        a{
+                            @include fonts(14, 700, $sub-title-color, capitalize, 40px);
+                            font-family: $second-font;
+                            padding: 0 25px;
+                            background-color: $tab-bg;
+
+                            @include respond-between(md, lg) {
+                            }
+                            @include respond-between(sm, md) {
+                              
+                            }
+                            @include respond-between(xs, sm) {
+                              padding: 0 15px;
+                            }
+                            @include respond-below(xs) {
+                              padding: 0 15px;
+                              @include texts(12, 30);
+                              margin-top: 10px;
+
+                            }
+                            i{
+                                margin-right: 10px;
+                            }
+
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .comment{
+                    &__author{
+                        &__reply{
+                            .link{
+                                button.btn{
+                                    a{
+                                        background-color: $main-bg;
+                                        color: $white-color;
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__disc{
+            p{
+                @include para-style;
+                margin-top: 15px;
+
+                @include respond-between(sm, md) {
+      
+                }
+                @include respond-between(xs, sm) {
+                margin-top: 10px;
+                @include texts (14, 18);
+
+                }
+                @include respond-below(xs) {
+                @include texts (12, 18);
+                  
+                }
+            }
+        }
+
+        &__box{
+            &__email{
+                input.form-control{
+                   font-size: 16px;
+                   line-height: 30px;
+                   color: $main-para-color;
+                   text-transform: capitalize;
+                   font-weight: 400;
+                   font-family: $second-font;
+                   padding: 12px 25px;
+                   background-color: $tab-bg;
+
+                @include respond-between(md, lg) {
+                }
+                @include respond-between(sm, md) {
+                    padding: 10px 25px;
+                  
+                }
+                @include respond-between(xs, sm) {
+                    padding: 7px 25px;
+                  
+                }
+                @include respond-below(xs) {
+                    padding: 5px 20px;
+                  
+                }
+                }
+                input.form-control:focus{
+                    background-color: $white-bg;
+                    box-shadow: 0 0 0 1px $main-bg;
+                }
+            }
+            &__text-area{
+                textarea.form-control{
+                    @include fonts(16, 400, $main-para-color, capitalize, 30px);
+                    font-family: $second-font;
+                    padding: 12px 25px;
+                    background-color: $tab-bg;
+                    height: 280px;
+
+                    @include respond-between(md, lg) {
+                    }
+                    @include respond-between(sm, md) {
+                      height: 240px;
+                        padding: 10px 25px;
+                        
+                    }
+                    @include respond-between(xs, sm) {
+                        height: 200px;
+                         padding: 7px 25px;
+                      
+                    }
+                    @include respond-below(xs) {
+                        padding: 5px 20px;
+                        height: 180px;
+                      
+                    }
+                }
+                textarea.form-control:focus{
+                    background-color: $white-bg;
+                    box-shadow: 0 0 0 1px $main-bg;
+                }
+            }
+            &__submit{
+                .links{
+                    button.btn{
+                        a.btn-box{
+                            background-color: $main-bg !important;
+                            color: $white-color !important;
+                            font-family: $second-font;
+
+                            @include respond-between(md, lg) {
+                            }
+                            @include respond-between(sm, md) {
+                              
+                            }
+                            @include respond-between(xs, sm) {
+                              
+                            }
+                            @include respond-below(xs) {
+                              
+                            }
+                            &:hover{
+                                background-color: $tab-bg !important;
+                                color: $sub-title-color !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

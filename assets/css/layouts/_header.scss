@@ -1,0 +1,329 @@
+.header-area{
+
+    .main-header{
+        background-color: $white-bg;
+
+        /* mobile-menu */
+        .mobile-icon{
+            .slicknav_menu{
+                padding: 0;
+                background-color: inherit;
+                .slicknav_btn{
+                    background-color: $main-bg;
+                    margin: 17px 0;
+                    @include respond-between(md, lg) {
+                    }
+                    @include respond-between(sm, md) {
+                        margin: 15px 0;
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                      
+                    }
+                    @include respond-below(xs) {
+                      margin: 6px 0;
+                    }
+                    &.slicknav_open{
+                        background-color: $tab-bg;
+                        .slicknav_icon{
+                            .slicknav_icon-bar{
+                                background-color: $menu-active;
+                            }
+                        }
+                    }
+                }
+                .slicknav_nav{
+                    background-color: $main-bg;
+                    text-align: center;
+                    .nav-item{
+                        &.slicknav_parent{
+                            a.slicknav_item{
+                            }
+                            .slicknav_item.slicknav_row{
+                                position: relative;
+                                margin: 0;
+                                padding: 0;
+                                .slicknav_arrow{
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 57%;
+                                    transform: translateY(-50%);
+                                    transition: all .3s ease-in-out;
+
+                                    @include respond-between(md, lg) {
+                                    }
+                                    @include respond-between(sm, md) {
+                                      
+                                    }
+                                    @include respond-between(xs, sm) {
+                                     left: 60%;
+                                      
+                                    }
+                                    @include respond-below(xs) {
+                                        left: 71%;
+                                      
+                                    }
+                                }
+                            }
+                            ul.sub-menu{
+                                margin: 0 40px;
+
+                                @include respond-below(xs) {
+                                    margin: 0 20px;
+      
+                                }
+                                li.nav-item{
+                                    a.nav-link{
+                                        text-transform: capitalize;
+                                        
+                                        @include respond-between(sm, md) {
+                                            padding: 7px 0 !important;
+                                          }
+                                          @include respond-below(md) {
+                                              color: $white-color ;
+                                          }
+                                          @include respond-between(xs, sm) {
+                                              padding: 6px 0 !important;
+                                          }
+                                          @include respond-below(xs) {
+                                              padding: 6px 0 !important;
+                                          }
+                                          &:hover {
+                                              color: $slick-arrow;
+                                          }
+                                    }
+                                }
+                            }
+                            &.slicknav_open{
+                                .nav-link{
+                                    color: $menu-active;
+                                }
+                                .slicknav_arrow{
+                                    color: $slick-arrow;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            .slicknav_arrow{
+                                color: $sub-title-color;
+                            }
+                        }
+                    }
+                    .nav-item{
+
+                        .nav-link{                           
+                            @include fonts(16, 600, $menu-color, uppercase, 40px);
+                            padding: 30px 25px !important;
+                            margin: 0;
+                            border-radius: 0px;
+                            display: block;
+
+                            @include respond-between(xl, xxl) {
+                              padding: 30px 20px !important;
+                            }
+                            @include respond-between(lg, xl) {
+                              padding: 28px 15px !important;
+
+                            }
+                            @include respond-between(md, lg) {
+                                font-size: 14px;
+                                padding: 22px 10px !important;
+                            }
+                            @include respond-between(sm, md) {
+                              padding: 10px 0 !important;
+                              line-height: 25px;
+                            }
+                            @include respond-below(md) {
+                                color: $white-color ;
+                            }
+                            @include respond-between(xs, sm) {
+                                padding: 8px 0 !important;
+                                line-height: 18px;
+                            }
+                            @include respond-below(xs) {
+                                padding: 10px 0 !important;
+                                line-height: 15px;
+                            }
+
+                            &.active{
+                                color: $hover-color;
+                                @include respond-below(md) {
+                                    color: $tramplate-color;
+                                }
+                            }
+                            &:hover{
+                                color: $hover-color;
+                                background-color: $border-bg;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mobile-menu{
+            display: none;
+
+            @include respond-between(md, lg) {
+            }
+            @include respond-between(sm, md) {
+            
+            }
+            @include respond-between(xs, sm) {
+            
+            }
+            @include respond-below(xs) {
+            
+            }
+        }
+        .js .slicknav_menu {
+            display:none;
+
+            @include respond-between(md, lg) {
+            }
+            @include respond-between(sm, md) {
+            
+            }
+            @include respond-between(xs, sm) {
+            
+            }
+            @include respond-below(xs) {
+            
+            }
+        }
+        .navbar{
+            .navbar-brand{
+
+                img{
+                    @include respond-below(xs) {
+                        width: 70%;
+                        
+                    }
+                }
+            }
+            .navbar-toggler{
+                border-color: $tramplate-color !important;
+                &:focus {
+                    box-shadow: 0 0 0 2px $main-bg;
+                }
+                span.navbar-toggler-icon{
+
+                }
+            }
+            .navbar-collapse{
+                ul.navbar-nav{
+                    @include respond-below(md) {
+                        background-color: $main-bg ;
+                    }
+                    li.nav-item{
+                        position: relative;
+                        a.nav-link{
+                            @include fonts(16, 600, $menu-color, uppercase, 40px);
+                            padding: 30px 25px !important;
+                            display: block;
+
+                            @include respond-between(xl, xxl) {
+                              padding: 30px 20px !important;
+                            }
+                            @include respond-between(lg, xl) {
+                              padding: 28px 15px !important;
+
+                            }
+                            @include respond-between(md, lg) {
+                                font-size: 14px;
+                                padding: 22px 10px !important;
+                            }
+                            @include respond-between(sm, md) {
+                              padding: 10px 0 !important;
+                              line-height: 25px;
+                            }
+                            @include respond-below(md) {
+                                color: $white-color ;
+                            }
+                            @include respond-between(xs, sm) {
+                                padding: 8px 0 !important;
+                                line-height: 18px;
+                            }
+                            @include respond-below(xs) {
+                                padding: 10px 0 !important;
+                                line-height: 15px;
+                            }
+
+                            &.active{
+                                color: $hover-color;
+                                @include respond-below(md) {
+                                    color: $tramplate-color;
+                                }
+                            }
+                            &:hover{
+                                color: $hover-color;
+                                background-color: $border-bg;
+                            }
+                            
+                        }
+                           
+                        //sub-menu                
+                        > ul.sub-menu{
+                            z-index: 444;
+                            position: absolute;
+                            top: 115%;
+                            left: 0;
+                            width: 300px;
+                            background-color: $blog-info;
+                            visibility: hidden;
+                            opacity: 0;
+                            pointer-events: none;
+                            transition: all .3s ease-in-out;
+
+                            @include respond-between(md, lg) {
+                                width: 200px;
+                            }
+                            li.nav-item{
+                                a.nav-link{
+
+                                    padding: 10px 0px !important;
+                                    color: $white-color;
+                                    text-transform: capitalize;
+                                    
+                                      @include respond-between(lg, xl) {
+                                        padding: 8px 0px !important;
+          
+                                      }
+                                      @include respond-between(md, lg) {
+                                          padding: 7px 0px !important;
+                                      }
+
+                                      &:hover{
+                                        color: $tramplate-color;
+                                        background-color: $border-bg;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover ul.sub-menu{
+                            top: 100%;
+                            visibility: visible;
+                            opacity: 1;
+                            pointer-events: visible;
+                        }
+                        &:hover > a{
+                            color: $hover-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.fixed-top{
+        border-bottom: 1px solid $hover-color;
+        @include respond-below(md) {
+            margin: 0 !important;
+            padding: 0 2% !important;
+            background-color: $white-bg;
+        }
+    }
+    @include respond-below(sm) {
+        padding: 0 2% !important;
+    }
+
+}

@@ -1,0 +1,736 @@
+.blog-area{
+    
+    .blog-section{
+        h2.blog-title{
+            @include fonts(34, 600, $blog-title, capitalize, 90px);
+            margin-bottom: 30px;
+        }
+        .link{
+            button.btn{
+                a{}
+            }
+        }
+
+    }
+    .blog-wrapper{
+        .single-blog{
+            padding: 60px 45px;
+            border: 1px solid $tab-bg;
+
+            @include respond-between(md, lg) {
+            }
+            @include respond-between(sm, md) {
+              padding: 50px 35px
+            }
+            @include respond-between(xs, sm) {
+              padding: 40px 35px
+            }
+            @include respond-below(xs) {
+              padding: 40px 30px
+            }
+            .link{
+                button.btn{
+                    a.btn-blog{
+                        @include fonts(14, 600, $white-color !important, uppercase, 40px);
+                        padding: 0 20px !important;
+                        background-color: $main-bg !important;
+
+
+                        &:hover {
+                            background-color: $tab-bg !important;
+                            color: $tramplate-color !important;
+                        }
+                    }
+                }
+            }
+            .blog-info{
+                p{
+                    @include fonts(25, 600, $tramplate-color, inherit, 30px);
+                    transition: all .3s ease-in-out;
+
+                    @include respond-between(md, lg) {
+                    }
+                    @include respond-between(sm, md) {
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                      font-size: 22px
+                    }
+                    @include respond-below(xs) {
+                      font-size: 20px;
+                      line-height: 26px
+                    }
+                }
+            }
+            .blog-date{
+                .icon{
+                    i{
+                         @include fonts(35, 400, $tramplate-color, inherit, 30px);
+                         transition: all .3s ease-in-out;
+                    }
+                }
+                .date{
+                    span{
+                        @include fonts(17, 700, $date-color, uppercase, 30px);
+                        
+                    }
+                }
+            }
+            &:hover{
+                & .blog-info p{
+                    color: $sub-title-color;
+                }
+                & .blog-date .icon i{
+                    color: $sub-title-color;
+                    transform: rotate(-45deg);
+                }
+                & .link button.btn a{
+                    background-color: $tab-bg !important;
+                    color: $tramplate-color !important;
+                }
+            }
+        }
+    }
+    .blog-post{
+        margin: 0 -20px !important;
+        .single-blog{
+            padding: 0 20px;
+            .blog-image{
+                img{
+
+                }
+            }
+            .blog-content{
+                padding: 35px 0;
+
+                @include respond-between(md, lg) {
+                    padding: 30px 0;
+                }
+                @include respond-between(sm, md) {
+                  padding: 30px 0;
+                }
+                @include respond-between(xs, sm) {
+                  
+                }
+                @include respond-below(xs) {
+                  padding: 25px 0;
+                }
+                .author-info{
+                    h4{
+                        @include fonts(16, 700, $blog-info, capitalize, 20px);
+                        font-family: $second-font;
+                        word-spacing: 4px;
+                        transition: all .3s ease-in-out;
+
+                        @include respond-below(xs) {
+                            @include texts(14, 18);
+                          
+                        }
+                        & span{
+                            color: $blog-by;
+
+                        }
+                    }
+                }
+                &__title{
+                    h2{
+                        @include fonts(23, 700, $blog-title, inherit, 35px);
+                        margin: 15px 0;
+
+                        @include respond-between(md, lg) {
+                            @include texts(20, 30);
+                            margin: 12px 0;
+                        }
+
+                        @include respond-between(sm, md) {
+                          margin: 10px 0;
+                        }
+                        @include respond-between(xs, sm) {
+                            @include texts(20, 27);
+                            margin: 8px 0
+                          
+                        }
+                        @include respond-below(xs) {
+                            @include texts(17, 25);
+                            margin: 10px 0;
+                        }
+                    }
+                }
+                &__disc{
+                    p{
+                        @include para-style;
+                    }
+                }
+                &__post{
+                    .date{
+                        ul{
+                            li{
+                                @include fonts(15, 600, $blog-info, capitalize, 20px);
+                                margin: 20px 0;
+                                transition: .3s ease-in-out;
+
+                                @include respond-between(md, lg) {
+                                }
+                                @include respond-between(sm, md) {
+                                  
+                                }
+                                @include respond-between(xs, sm) {
+                                  margin: 10px 0;
+                                }
+                                @include respond-below(xs) {
+                                  margin: 10px 0;
+                                  font-size: 14px;
+                                }
+                                &:last-child{
+                                    margin-left: 30px;
+                                    list-style: disc;
+                                    text-transform: lowercase
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .blog-content {
+                    .author-info{
+                        h4{
+                            color: $sub-title-color;
+                            & span {
+                                color: $blog-info;
+                            }
+                        }
+                    }
+                    &__post{
+                        .date{
+                            ul{
+                                li{
+                                    &:last-child{
+                                        color: $sub-title-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .pagination-area{
+            .pagination{
+                align-items: center;
+                .page-item{
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 8px;
+                    overflow: hidden;
+
+                                           
+
+                    @include respond-between(md, lg) {
+                    }
+                    @include respond-between(sm, md) {
+                      height: 50px;
+                      width: 50px;
+                    }
+                    @include respond-between(xs, sm) {
+                        height: 40px;
+                        width: 40px;
+                    }
+                    @include respond-below(xs) {
+                        height: 35px;
+                        width: 35px;
+                    }
+                    &.active{
+                       .page-link{
+                        background-color: $main-bg !important;
+                        color: $white-color;
+                       }
+                    }
+                    .page-link{
+                        background-color: $tab-bg !important;
+                        @include fonts(16, 600, $blog-info, uppercase, 35px);
+
+                        @include respond-below(xs) {
+                            font-size: 12px;
+                        }
+
+                        &:hover {
+                            background-color: $main-bg !important;
+                            color: $white-color;
+                        }
+                        &:focus{
+                            box-shadow: 0 0 3px $tramplate-color
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .blog-sidebar{
+        &__title{
+            h2{
+                @include fonts(25, 700, $blog-side-title, capitalize, 35px);
+                padding-bottom: 20px;
+
+                @include respond-between(md, lg) {
+                }
+                @include respond-between(sm, md) {
+                    margin-bottom: 15px;
+                  
+                }
+                @include respond-between(xs, sm) {
+                    margin-bottom: 13px;
+                  
+                }
+                @include respond-below(xs) {
+                    margin-bottom: 10px;
+                  
+                }
+            }
+        }
+        &__single{
+            margin-bottom: 75px;
+
+            @include respond-between(md, lg) {
+                 margin-bottom: 65px;
+
+            }
+            @include respond-between(sm, md) {
+                margin-bottom: 45px;
+              
+            }
+            @include respond-between(xs, sm) {
+                margin-bottom: 35px;
+              
+            }
+            @include respond-below(xs) {
+                margin-bottom: 25px;
+              
+            }
+            .search-area{
+                input.form-control{
+                    padding: 20px 30px!important;
+                    background-color: $tab-bg;
+                    border: none;
+
+                    @include respond-between(md, lg) {
+                        padding: 15px 10px !important;
+                    }
+                    @include respond-between(sm, md) {
+                      padding: 15px 20px !important;
+                    }
+                    @include respond-between(xs, sm) {
+                        padding: 13px 16px !important;
+                      
+                    }
+                    @include respond-below(xs) {
+                        padding: 10px 20px !important;
+                      
+                    }
+                }
+                input.form-control::placeholder{
+                    @include fonts(18 !important, 400, $blog-side-title !important, capitalize, 40px !important);
+                }
+                input.form-control:focus{
+                    box-shadow: 0px 0px 0px 1px $main-bg;
+                }
+                .icon{
+                    right: 20px;
+                    transform: translateY(-50%);
+                    i{
+                        font-size: 16px;
+                        color: $sub-title-color;
+                    }
+                }
+            }
+
+        }
+        &__post{
+            @include respond-between(md, lg) {
+            }
+            @include respond-between(sm, md) {
+                display: flex;
+                flex-direction: row;
+                flex-flow: wrap;
+                justify-content: space-between;
+            }
+
+
+            &__box{
+                margin-top: 30px;
+
+                @include respond-between(md, lg) {
+                    margin-top: 25px;
+
+                }
+
+                @include respond-between(sm, md) {
+                     margin-top: 20px;
+                     flex-basis: 47%;
+                  
+                }
+                @include respond-between(xs, sm) {
+                    margin-top: 18px;
+                  
+                }
+                @include respond-below(xs) {
+                     margin-top: 15px;
+                  
+                }
+                &__image{
+                    flex-basis: 25%;
+                    margin-right: 15px;
+
+                    @include respond-between(md, lg) {
+                        flex-basis: 35%;
+                    }
+                    @include respond-between(sm, md) {
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                      
+                    }
+                    @include respond-below(xs) {
+                      
+                    }
+                    img{
+
+                    }
+                }
+                &__content{
+                    flex-basis: 75%;
+                    &__title{
+                        h2{
+                            @include fonts(17, 500, $tramplate-color, capitalize, 25px);
+                            font-family: $second-font;
+
+                            @include respond-between(md, lg) {
+                                @include texts(14, 20)
+                            }
+                            @include respond-between(sm, md) {
+                              
+                            }
+                            @include respond-between(xs, sm) {
+                              
+                            }
+                            @include respond-below(xs) {
+                                @include texts(14, 20)
+                            }
+                        }
+                    }
+                    &__update{
+                        .date{
+                            ul{
+                                li{
+                                    i{
+                                        font-size: 12px;
+                                        margin-right: 10px;
+                                    }
+                                    @include fonts(14, 400, $blog-side-date, lowercase, 20px);
+                                    font-family: $second-font;
+                                    transition: all .3s ease-in-out;
+                                    &:last-child{
+                                        margin-left: 30px;
+                                        list-style: disc;
+
+                                        @include respond-between(md, lg) {
+                                            display: none;
+
+                                        }
+                                        @include respond-between(sm, md) {
+                                          
+                                        }
+                                        @include respond-between(xs, sm) {
+                                          
+                                        }
+                                        @include respond-below(xs) {
+                                          
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    .blog-sidebar__post__box__content__update{
+                        ul{
+                            li{
+                                color: $sub-title-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .follows-area{
+            @include respond-between(sm, md) {
+                display: flex;
+                flex-direction: row;
+                flex-flow: wrap;
+                justify-content: space-between;
+            }
+            @include respond-between(xs, sm) {
+              
+            }
+            @include respond-below(xs) {
+              
+            }
+            .follow{
+                transition: all .3s ease-in-out !important;
+                padding: 17px 30px;
+                background-color: $tab-bg;
+                margin-top: 20px;
+
+                @include respond-between(sm, md) {
+                    flex-basis: 47%;
+                    padding: 15px 25px;
+                    margin-top: 15px;
+                }
+                @include respond-between(xs, sm) {
+                    padding: 13px 20px;
+                    margin-top: 13px;
+                }
+                @include respond-below(xs) {
+                  margin-top: 10px;
+                    padding: 10px 17px;
+                 }
+                &__item{
+                    &__icon{
+                        margin-right: 20px;
+                        i{
+                            @include texts(18, 26);
+                            color: $blog-side-title;
+                            transition: all .3s ease-in-out;
+                        }
+                    }
+                    &__info{
+                        h4{
+                            @include fonts(16, 700, $socail-title, capitalize, 26px);
+                            font-family: $second-font;
+                            transition: all .3s ease-in-out;
+                        
+                        }
+                    }
+                }
+
+                &__counte, &__action{
+                    p{
+                        @include fonts(15, 700, $sub-title-color, capitalize, 26px); 
+                        font-family:$second-font; 
+                        transition: all .3s ease-in-out;
+                    }
+                }
+                &__counte{
+                    &__action{
+                        right: 0;
+                        transform: translateY(-50%);
+                        visibility: hidden;
+                        opacity: 0;
+                        p{
+                            
+                        }
+                    }
+                }
+                &:hover {
+                    background-color: $main-bg;
+                    .follow__item{
+                        &__icon{
+                            i{
+                                color: $white-color;
+                            }
+                        }
+                        &__info{
+                            h4{
+                                color: $white-color;
+                            }
+                        }
+                    }
+                    .follow__counte{
+                        p{
+                            z-index: -33;
+
+                        }
+                        &__action{
+                            visibility: visible;
+                            opacity: 1;
+                            z-index: 33;
+                            p{
+                                color: $white-color !important;
+
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+        .advertisment{
+            &__content{
+                background-color: $tab-bg;
+                height: 500px;
+
+                @include respond-between(md, lg) {
+                    height: 400px
+                }
+                @include respond-between(sm, md) {
+                  height: 300px;
+                }
+                @include respond-between(xs, sm) {
+                  height: 200px
+                }
+                @include respond-below(xs) {
+                  height: 170px
+                }
+                &__title{
+                    h2{
+                        @include fonts(18, 600, $advertisment-color, inherit, 30px);
+                        & span{
+                            font-weight: 700;
+                            text-transform: capitalize;
+                            font-size: 22px;
+                        }
+                    }
+                }
+                &__size{
+                    h4{
+                        
+                        @include fonts(14, 600, $advertisment-color, capitalize, 30px);
+                        margin-top: 45px;
+                        
+                        @include respond-between(sm, md) {
+                            margin-top: 25px;
+                        }
+                        @include respond-between(xs, sm) {
+                            margin-top: 20px;
+                        
+                        }
+                        @include respond-below(xs) {
+                            margin-top: 15px;
+                        
+                        }
+                    }
+                    p{
+                        @include fonts(18, 600, $advertisment-color, capitalize, 30px);
+                    }
+                }
+            }
+        }
+    }
+    &.blog-slide{
+        background-color: $blog-bg;
+        padding-bottom: 15px;
+
+        .blog-section{
+            h2.blog-title{
+                @include fonts(34, 600, $blog-title, capitalize, 90px);
+                margin-bottom: 30px;
+
+                @include respond-between(md, lg) {
+                    @include texts(32, 80)
+                }
+                @include respond-between(sm, md) {
+                    @include texts(30, 75)
+                  
+                }
+                @include respond-between(xs, sm) {
+                    @include texts(30, 60)
+                  
+                }
+                @include respond-below(xs) {
+                    @include texts(30, 50)
+                  
+                }
+            }
+        }
+        .blog-post{
+            .blog-active{
+                .slick-list{
+                    margin: 0 -30px !important;
+
+
+                    @include respond-between(sm, md) {
+                        margin: 0 -20px !important;
+                    
+                    }
+                    @include respond-between(xs, sm) {
+                        margin: 0 -15px !important;
+                    
+                    }
+                    @include respond-below(xs) {
+                        margin: 0 -10px !important;
+                    
+                    }
+                }
+            }
+            .single-blog{
+                padding: 0 30px;
+
+                        
+                @include respond-between(md, lg) {
+                    
+                }
+                @include respond-between(sm, md) {
+                    padding: 0 20px;
+                
+                }
+                @include respond-between(xs, sm) {
+                    padding: 0 15px;
+                
+                }
+                @include respond-below(xs) {
+                    padding: 0 10px;
+                
+                }
+                .blog-content{
+
+                    .author-info{
+                        h4{
+
+                            color: $blog-title;
+
+                        }
+                    }
+                    &__title{
+                        h2{
+                            color: $blog-title-slide;
+
+                        }
+                    }
+                    &__post{
+                        .date{
+                            ul{
+                                li{
+                                    color: $blog-title;
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.blog-title{
+    h2{
+        @include fonts(52, 700, $tramplate-color, capitalize, 55px);
+
+        @include respond-between(md, lg) {
+            @include texts(47, 50)
+        }
+        @include respond-between(sm, md) {
+            @include texts(40, 45)
+          
+        }
+        @include respond-between(xs, sm) {
+            @include texts(35, 42)
+          
+        }
+        @include respond-below(xs) {
+            @include texts(28, 38)
+          
+        }
+    }
+}

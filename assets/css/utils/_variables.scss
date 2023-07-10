@@ -1,0 +1,532 @@
+//text-color
+$tramplate-color:#171b23;
+$sub-title-color:#0055ff;
+$menu-color:#8a8a8a;
+$hover-color:#3045ff;
+$white-color:#fff;
+$para-color:#171b23;
+$date-color:#747474;
+$place-color:#6e6d6d;
+$info-color:#a8aaad;
+$copy-color:#a8aaad;
+$main-para-color:#656565;
+$service-num:#e5e5e6;
+$service-menu:#6a6a6a;
+$blog-info:#0f034a;
+$blog-by:#9b9ea1;
+$blog-title:#081131;
+$blog-side-title:#0a071b;
+$blog-side-date:#52565b;
+$socail-title:#0e0e0e;
+$advertisment-color:#22262a;
+$blog-title:#131b13;
+$blog-author-date:#626262;
+$list-dot:#091d40;
+$blog-tab:#383e38;
+$share-title:#0a1e43;
+$blog-title-slide:#10253b;
+$contact-info:#6f6f6f;
+$slick-arrow:lawngreen;
+$menu-active:red;
+
+//backgroutd-color
+
+$main-bg:#3045ff;
+$arrow-bg:#f7f7f7;
+$tab-bg:#f0f0f0;
+$white-bg:#fff;
+$border-bg:#e7e7e7;
+$layout-bg:#041024;
+$footer-bg:#171b23;
+$blog-bg:#f4f4f4;
+
+//margin-auto
+.mx-auto-110{
+    margin: auto 110px !important;
+
+    @include respond-between(xl, xxl) {
+            margin: auto 85px !important;
+        
+    }
+    @include respond-between(lg, xl) {
+        margin: auto 65px !important;
+    
+    }
+    @include respond-between(md, lg) {
+         margin: auto 50px !important;
+        
+    }
+    @include respond-between(sm, md) {
+        margin: auto 35px !important;
+      
+    }
+    @include respond-between(xs, sm) {
+        margin: auto 25px !important;
+      
+    }
+    @include respond-below(xs) {
+        margin: auto 0px !important;
+      
+    }
+}
+.z-index1{
+    z-index: 1;
+}
+.z-index-1{
+    z-index: -1;
+}
+.display-block{
+    display: block !important;
+
+}
+//rotate
+.rotate-0{
+    transform: rotate(0deg) !important;
+}
+//button Css
+.btn{
+    border: none !important;
+    outline: none !important;
+    background-color: transparent !important;
+    padding: 0 0 !important;
+    &:focus{
+        box-shadow: none !important;
+    }
+}
+//post-btn
+.btn-post{
+    @include fonts(18, 700, $tramplate-color, capitalize, 50px);
+    display: inline-block;
+    padding: 0 45px !important;
+    background-color: $tab-bg !important;
+
+    @include respond-between(md, lg) {
+        padding: 0 40px !important;
+    }
+    @include respond-between(sm, md) {
+      padding: 0 35px !important;
+      font-size: 17px;
+    }
+    @include respond-between(xs, sm) {
+      padding: 0 30px !important;
+      font-size: 16px;
+    }
+    @include respond-below(xs) {
+      padding: 0 25px !important;
+      font-size: 14px;
+    }
+
+    &:hover {
+        background-color: $main-bg !important;
+        color: $white-color;
+    }
+}
+.btn-blue{
+    @include fonts(16, 600, $white-color !important, uppercase, 75px);
+    padding: 0 55px;
+    display: inline-block;
+    background-color: $main-bg;
+    transition: .3s ease-in-out;
+
+    @include respond-between(md, lg) {
+        padding: 0 50px;
+        line-height: 70px;
+    }
+    @include respond-between(sm, md) {
+        padding: 0 40px;
+        line-height: 60px;
+    }
+    @include respond-between(xs, sm) {
+        padding: 0 30px;
+        line-height: 55px;
+    }
+    @include respond-below(xs) {
+        padding: 0 26px;
+        line-height: 45px;
+    }
+
+    &:hover {
+        color: $sub-title-color !important;
+        background-color: $tab-bg;
+    }
+}
+.btn-primary{
+    @include fonts(16, 600, $tramplate-color !important, uppercase, 40px);
+    padding: 20px 40px !important;
+    background-color: transparent !important;
+    display: inline-block;
+
+    @include respond-between(xl, xxl) {
+        padding: 20px 35px !important;
+    }
+    @include respond-between(lg, xl) {
+        padding: 20px 30px !important;
+        line-height: 35px;
+    }
+    
+    @include respond-between(md, lg) {
+        padding: 18px 20px !important;
+        font-size: 14px;
+        line-height: 30px;
+    }
+    @include respond-between(sm, md) {
+        padding: 16px 20px !important;
+        line-height: 25px;
+        font-size: 14px;
+    }
+    @include respond-between(xs, sm) {
+        padding: 15px 20px !important;
+        line-height: 22px;
+    }
+    @include respond-below(xs) {
+      line-height: 20px;
+      padding: 15px 20px !important;
+    }
+    &:focus{
+        box-shadow: none !important;
+    }
+
+    &.btn-box{
+        border: 1px solid $border-bg;
+        position: relative;
+        &::after{
+            @include after($main-bg, 2px, 2px, 0, none, 0, none);
+            transition: all .3s ease-in-out;
+        }
+        &::before{
+            @include after($main-bg, 2px, 2px, none, 0, none, 0);
+            transition: all .3s ease-in-out;
+        }
+
+    }
+    &:hover.btn-box::after{
+        width: 100%;
+    }
+    &:hover.btn-box::before{
+        width: 100%;
+    }
+    &:hover {
+        color: $hover-color !important;
+    }
+}
+
+.btn-success{
+    @include fonts(16, 600, $white-color !important, uppercase, 40px);
+    padding: 20px 40px;
+    background-color: transparent !important;
+    display: inline-block;
+
+    
+    @include respond-between(md, lg) {
+        padding: 18px 35px;
+        font-size: 14px;
+        line-height: 30px;
+    }
+    @include respond-between(sm, md) {
+        padding: 16px 30px;
+        line-height: 25px;
+        font-size: 14px;
+    }
+    @include respond-between(xs, sm) {
+        padding: 15px 25px;
+        line-height: 22px;
+    }
+    @include respond-below(xs) {
+      line-height: 25px;
+      padding: 15px 20px;
+    }
+    &:focus{
+        box-shadow: none !important;
+    }
+
+    &.btn-box{
+        border: 1px solid $border-bg;
+        position: relative;
+        &::after{
+            @include after($main-bg, 2px, 2px, 0, none, 0, none);
+            transition: all .3s ease-in-out;
+        }
+        &::before{
+            @include after($main-bg, 2px, 2px, none, 0, none, 0);
+            transition: all .3s ease-in-out;
+        }
+
+    }
+    &:hover.btn-box::after{
+        width: 100%;
+    }
+    &:hover.btn-box::before{
+        width: 100%;
+    }
+    &:hover {
+        color: $hover-color !important;
+    }
+    i{
+        right: 10%;
+        transition: all .3s ease-in-out;
+
+        @include respond-between(md, lg) {
+        }
+        @include respond-between(sm, md) {
+          right: 7%;
+        }
+        @include respond-between(xs, sm) {
+          right: 5%;
+        }
+        @include respond-below(xs) {
+          right: 4%;
+        }
+    }
+    &:hover i{
+        right: 3%;
+    }
+}
+.links{
+    height: 150px;
+
+  @include respond-between(md, lg) {
+      height: 120px;
+  }
+  @include respond-between(sm, md) {
+    height: 100px;
+  }
+  @include respond-between(xs, sm) {
+    height: 80px;
+  }
+  @include respond-below(xs) {
+    height: 70px;
+  }
+    button.btn{
+      a.btn-more{
+        color: $tramplate-color !important;
+      }
+    }
+    &:hover button.btn a.btn-more{
+      color: $sub-title-color !important;
+    }
+  }
+//section-padding
+
+.section-padding{
+    padding: 140px 0px;
+
+    @include respond-between(md, lg) {
+         padding: 120px 0px;
+    }
+    @include respond-between(sm, md) {
+         padding: 80px 0px;
+    }
+    @include respond-between(xs, sm) {
+         padding: 50px 0px;
+    }
+    @include respond-below(xs) {
+          padding: 35px 0px;
+    }
+
+}
+.speace-t-80 {
+    padding-top: 80px;
+
+    @include respond-between(md, lg) {
+        padding-top: 60px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 45px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 32px;
+    }
+    @include respond-below(xs) {
+        padding-top: 28px;
+    }
+}
+.speace-t-70 {
+    padding-top: 70px;
+
+    @include respond-between(md, lg) {
+        padding-top: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 30px;
+    }
+    @include respond-below(xs) {
+        padding-top: 26px;
+    }
+}
+.speace-b-70 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 30px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 26px;
+    }
+}
+.speace-t-60 {
+    padding-top: 60px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-b-60 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+.speace-t-50 {
+    padding-top: 50px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+
+.speace-b-50 {
+    padding-bottom: 50px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+
+.speace-l-50 {
+    padding-left: 50px;
+
+    @include respond-between(md, lg) {
+        padding-left: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-left: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-left: 0px;
+    }
+    @include respond-below(xs) {
+        padding-left: 0px;
+    }
+}
+.speace-t-40 {
+    padding-top: 40px;
+
+    @include respond-between(md, lg) {
+        padding-top: 30px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 25px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-t-30 {
+    padding-top: 30px;
+
+    @include respond-between(md, lg) {
+        padding-top: 25px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 20px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 18px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+
+//bg-size
+.bg-cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+ 
+}
+.bg-layout{
+    position: relative;
+    &::after{
+        @include after($layout-bg, 100%, 100%, 0, none, 0, none);
+        opacity: .55;
+        z-index: 1;
+
+    }
+}
+//html&body
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+//para-style
+
+@mixin para-style {
+    font-family: $second-font;
+    @include fonts(16, 400, $main-para-color, inherit, 20px);
+
+    @include respond-between(md, lg) {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    @include respond-between(sm, md) {
+      
+    }
+    @include respond-between(xs, sm) {
+      
+    }
+    @include respond-below(xs) {
+      
+    }
+}

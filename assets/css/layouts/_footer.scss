@@ -1,0 +1,163 @@
+.footer-area{
+    .footer-top{
+        background-color: $footer-bg;
+        margin-top: 60px;
+        padding-top: 200px;
+    
+        @include respond-between(md, lg) {
+            padding-top: 160px;
+            margin-top: 50px;
+        }
+        @include respond-between(sm, md) {
+            padding-top: 140px;
+            margin-top: 50px;
+        }
+        @include respond-between(xs, sm) {
+            padding-top: 130px;
+            margin-top: 45px;
+        }
+        @include respond-below(xs) {
+            padding-top: 90px;
+            margin-top: 45px;
+        }
+    }
+    .footer-widget{
+        .single-info{
+            &:hover {
+                & .footer-title {
+                    h3{
+                         color: $sub-title-color;
+                    }
+                }
+            }
+        }
+        .footer-title{
+            h3{
+                @include fonts(18, 600, $white-color, capitalize, 40px);
+                transition: all .3s ease-in-out;
+
+
+                @include respond-between(xs, sm) {
+                  line-height: 25px
+                }
+                @include respond-below(xs) {
+                  
+                }
+            }
+        }
+        .footer-info{
+            span, a{
+                @include fonts(18, 600, $info-color, capitalize, 40px);
+                transition: all .3s ease-in-out;
+
+                @include respond-between(md, lg) {
+                    font-size: 16px;
+                }
+                @include respond-below(lg) {
+                    line-height: 25px;
+                }
+            }
+            span {
+
+                a{
+                    padding-bottom: 15px;
+
+                    i{
+                        margin-right: 15px;
+
+                        @include respond-between(md, lg) {
+                            margin-right: 12px;
+                        }
+  
+                    }
+                }
+                &:hover a{
+                    color: $sub-title-color;
+                }
+            }
+        }
+        .share-image{
+            padding-bottom: 40px;
+            &::after, &:before{
+                position: absolute;
+                content: '';
+                background-color: $white-bg;
+                bottom: 0;
+                height: 4px;
+            }
+
+            &::after{
+                left: 0;
+                width: 100%;
+            }
+            &::before{
+                background-color: $main-bg;
+                width: 20%;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 2;
+            }
+            .single-photo{
+                img{
+
+                }
+                .photo-action{
+                    transition: all .3s ease-in-out;
+                    transform: scaleY(0);
+                    transform-origin: bottom;
+                    &.bg-layout{
+                        &::after{
+                            background-color: $main-bg !important;
+                        }
+                    }
+                    .icon{
+                        position: relative;
+                        z-index: 33;
+                        i{
+                            font-size: 15px;
+                            color: $white-color;
+                        }
+                    }
+                }
+                &:hover .photo-action{
+                    transform: scaleY(1);
+                }
+            }
+        }
+    }
+    .copy-right-area{
+        background-color: $footer-bg;
+        .copy-right-info{
+            p{
+                @include fonts(15, 500, $copy-color, capitalize, 56px);
+
+                @include respond-between(md, lg) {
+                }
+                @include respond-between(sm, md) {
+                  line-height: 45px;
+                }
+                @include respond-between(xs, sm) {
+                  line-height: 40px;
+                }
+                @include respond-below(xs) {
+                    padding: 8px 0px;
+                    line-height: 30px;
+                }
+                span, i{
+                    color: $white-color;
+                    transition: all .3s ease-in-out;
+                }
+                i{
+                    margin: 0 5px;
+                }
+            }
+            &:hover {
+                p{
+                    span, i{
+                        color: $sub-title-color;
+                    }
+                }
+            }
+        }
+    }
+}

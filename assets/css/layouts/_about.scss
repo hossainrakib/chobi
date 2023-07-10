@@ -1,0 +1,91 @@
+.about-area{
+    .about-img{
+
+        img{
+
+        }
+    }
+    .about-content{
+        padding: 50px 0;
+
+        @include respond-between(md, lg) {
+            padding: 30px 0
+        }
+        @include respond-between(sm, md) {
+            padding: 35px 0
+          
+        }
+        @include respond-between(xs, sm) {
+            padding: 25px 0
+          
+        }
+        @include respond-below(xs) {
+            padding: 20px 0
+          
+        }
+        .about-title{
+            h2{
+                @include fonts(40, 500, $tramplate-color, inherit, 54px);
+                text-decoration: 1px underline $tramplate-color;
+
+                @include respond-between(md, lg) {
+                    @include texts(30, 45)
+                     
+                }
+                @include respond-between(sm, md) {
+                    @include texts(30, 45)
+                  
+                }
+                @include respond-between(xs, sm) {
+                    @include texts(28, 40)
+                  
+                }
+                @include respond-below(xs) {
+                    @include texts(25, 35)
+                  
+                }
+            }
+        }
+        .about-sub-title{
+            h3{
+                @include fonts(30, 500, $tramplate-color, inherit, 50px);
+
+                @include respond-between(md, lg) {
+                    @include texts(24, 35);
+                }
+                @include respond-between(sm, md) {
+                    @include texts(25, 35);
+                  
+                }
+                @include respond-between(xs, sm) {
+                    @include texts(22, 30);
+                  
+                }
+                @include respond-below(xs) {
+                    @include texts(20, 28);
+                  
+                }
+            }
+        }
+        .about-info{
+            p{
+                @include para-style;
+            }
+        }
+        .about-button{
+            .link{
+                button.btn{
+                    a{
+                        background-color: $main-bg !important;
+                        color: $white-color !important;
+
+                        &:hover {
+                            background-color: $tab-bg !important;
+                            color: $tramplate-color !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

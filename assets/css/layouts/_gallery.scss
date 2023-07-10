@@ -1,0 +1,468 @@
+.gallery-area{
+    .gallery-button{
+        ul.nav{
+            display: inherit !important;
+            text-align: center;
+            margin: -15px;
+
+            @include respond-between(md, lg) {
+
+            }
+            @include respond-between(sm, md) {
+                margin: -10;
+              
+            }
+            @include respond-between(xs, sm) {
+                margin: -7;
+              
+            }
+            @include respond-below(xs) {
+                margin: -5;
+              
+            }
+            li.nav-item{
+                display: inline-block;
+                button.nav-link{
+                    @include fonts(20, 600,$tramplate-color, uppercase, 80px);
+                    padding: 0 70px;
+                    background-color: $tab-bg !important;
+                    border: 1px solid $tab-bg;
+                    margin: 15px;
+
+                    @include respond-between(lg, xl) {
+                        line-height: 60px;
+                        padding: 0 44px;
+                    }
+                    @include respond-between(md, lg) {
+                        line-height: 60px;
+                        font-size: 18px;
+                        padding: 0 46px;
+                    }
+                    @include respond-between(sm, md) {
+                      margin: 10px;
+                      font-size: 16px;
+                      line-height: 60px;
+                      padding: 0 33px;
+                    }
+                    @include respond-between(xs, sm) {
+                        margin: 7px;
+                        font-size: 14px;
+                        line-height: 45px;
+                        padding: 0 25px;
+                    }
+                    @include respond-below(xs) {
+                        margin: 5px;
+                        font-size: 12px;
+                        line-height: 35px;
+                        padding: 0 18px;
+                    }
+                    &.actives{
+                      background-color: $white-bg !important;
+                      color: $sub-title-color !important;
+                   }
+
+                    // &.mixitup-control-active{
+                    //   background-color: $white-bg !important;
+                    //   color: $sub-title-color !important;
+                    // }
+
+                }
+            }
+        }
+    }
+    .gallery-showed{
+      .mix{
+      }
+        .grid, .grid2{
+            .grid-item, .grid-item2{
+                .single-img, .all-img{
+                    height: 100%;
+                    display: block;
+                }
+                .single-img{
+                    .all-img{
+                        img{
+                            transition: all .3s ease-in-out;
+                            &:hover {
+                                filter: brightness(.6);
+                            }
+                        }
+                    }
+                    .grid-action{
+                        transition: all .3s ease-in-out !important;
+                        bottom: 0;
+                        transform: scaleY(0);
+                        transform-origin: bottom;
+                        z-index: 2;
+
+
+                        .grid-title{
+                            h2{
+                                @include fonts(20, 600, $white-color, capitalize, 40px);
+                                position: relative;
+                                z-index: 5;
+
+                                @include respond-between(md, lg) {
+                                    font-size: 17px;
+                                }
+                                @include respond-between(sm, md) {
+                                  
+                                }
+                                @include respond-between(xs, sm) {
+                                  
+                                }
+                                @include respond-below(xs) {
+                                  
+                                }
+                            }
+                        }
+                        &:hover {
+                            @extend .bg-layout;
+                            z-index: 1;
+                        }
+                    }
+                    .grid-dis{
+                        a{
+                            @include fonts(12, 600, $sub-title-color, capitalize, 30px);
+                            display: inline-block;
+                            position: relative;
+                            z-index: 5;
+                            padding-bottom: 70px;
+
+                            @include respond-between(md, lg) {
+                                padding-bottom: 45px;
+                            }
+                            @include respond-between(sm, md) {
+                              padding-bottom: 60px;
+                            }
+                            @include respond-between(xs, sm) {
+                              padding-bottom: 50px;
+                            }
+                            @include respond-below(xs) {
+                              padding-bottom: 45px;
+                            }
+                        }
+                    }
+                    &:hover .grid-action {
+                        transform: scaleY(1);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+/* ---- grid ---- */
+
+.grid {
+  max-width: 1900px;
+
+  @include respond-between(lg, xl) {
+    
+    }
+
+  @include respond-between(md, lg) {
+  }
+  @include respond-between(sm, md) {
+    
+  }
+  @include respond-between(xs, sm) {
+    
+  }
+  @include respond-below(xs) {
+    
+  }
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 25%;
+
+    @include respond-between(md, lg) {
+
+    }
+    @include respond-between(sm, md) {
+        width: 50%;
+
+    }
+    @include respond-between(xs, sm) {
+
+    }
+    @include respond-below(sm) {
+        width: 100%;
+    }
+}
+
+.grid-sizer2,
+.grid-item2 {
+  width: 16.66%;
+
+    @include respond-above(lg) {
+      
+    }
+    @include respond-between(md, lg) {
+     
+    }
+    @include respond-between(sm, md) {
+       
+
+    }
+    @include respond-below(sm) {
+       
+    }
+}
+.grid-item--width2 {
+    width: 50%;
+
+    @include respond-between(md, lg) {
+    }
+    @include respond-between(sm, md) {
+      width: 100%;
+    }
+    @include respond-between(xs, sm) {
+      
+    }
+    @include respond-below(sm) {
+      width: 100%;
+    }
+}
+.grid-item--width3 { 
+  width: 100%; 
+
+  @include respond-between(md, lg) {
+     
+  }
+  @include respond-between(sm, md) {
+    
+  }
+  @include respond-between(xs, sm) {
+    
+  }
+  @include respond-below(xs) {
+    
+  }
+
+}
+
+.grid-item--width4 { 
+  width: 33.33%; 
+
+  @include respond-between(md, lg) {
+  }
+  @include respond-between(sm, md) {
+    width: 50%;
+  }
+  @include respond-below(sm) {
+    width: 100%;
+  }
+
+}
+.grid-item--width5 {
+  width: 75%;
+
+  @include respond-between(md, lg) {
+  }
+  @include respond-between(sm, md) {
+    width: 50%;
+  }
+  @include respond-between(xs, sm) {
+    
+  }
+  @include respond-below(sm) {
+    width: 100%;
+  }
+}
+.grid-item {
+  height: 435px;
+  float: left;
+
+    @include respond-between(md, lg) {
+        height: 335px;
+    }
+    @include respond-between(sm, md) {
+        height: 285px;
+
+    }
+    @include respond-between(xs, sm) {
+        height: 250px;
+    }
+    @include respond-below(xs) {
+        height: 200px;
+    }
+}
+
+.grid-item--height2 {
+    height: 765px;
+
+    @include respond-between(md, lg) {
+        height: 665px;
+    }
+    @include respond-between(sm, md) {
+      height: 500px;
+    }
+    @include respond-between(xs, sm) {
+      height: 400px;
+    }
+    @include respond-below(xs) {
+      height: 320px;
+    }
+}
+.grid-item--height3 {
+    height: 900px;
+
+    @include respond-between(md, lg) {
+        height: 753px;
+    }
+    @include respond-between(sm, md) {
+      height: 600px;
+    }
+    @include respond-between(xs, sm) {
+      height: 500px;
+    }
+    @include respond-below(xs) {
+      height: 400px;
+    }
+}
+.grid-item--height4 { 
+    height: 368px;
+
+    @include respond-between(md, lg) {
+        height: 268px;
+    }
+    @include respond-between(sm, md) {
+      height: 200px;
+    }
+    @include respond-between(xs, sm) {
+      height: 190px;
+    }
+    @include respond-below(xs) {
+      height: 170px;
+    }
+}
+.grid-item--height5 { 
+    height: 375px; 
+
+    @include respond-between(md, lg) {
+        height: 277px;
+    }
+    @include respond-between(sm, md) {
+      height: 220px;
+    }
+    @include respond-between(xs, sm) {
+      height: 200px;
+    }
+    @include respond-below(xs) {
+      height: 180px;
+    }
+
+}
+
+//protfolio_grid_01
+
+.grid-item--height6 { 
+  height: 576px; 
+
+  @include respond-between(md, lg) {
+      height: 576px;
+  }
+  @include respond-between(sm, md) {
+    height: 420px;
+  }
+  @include respond-between(xs, sm) {
+    height: 300px;
+  }
+  @include respond-below(xs) {
+    height: 200px;
+  }
+
+}
+
+
+.grid-item--height7 { 
+  height: 270px; 
+
+  @include respond-between(md, lg) {
+      height: 250px;
+  }
+  @include respond-between(sm, md) {
+    height: 220px;
+  }
+  @include respond-between(xs, sm) {
+    height: 200px;
+  }
+  @include respond-below(xs) {
+    height: 175px;
+  }
+
+}
+
+.grid-item--height8 { 
+  height: 245px; 
+
+  @include respond-between(md, lg) {
+      height: 220px;
+  }
+  @include respond-between(sm, md) {
+    height: 190px;
+  }
+  @include respond-between(xs, sm) {
+    height: 170px;
+  }
+  @include respond-below(xs) {
+    height: 165px;
+  }
+
+}
+
+
+.grid-item--height9 { 
+  height: 565px; 
+
+  @include respond-between(md, lg) {
+      height: 525px;
+  }
+  @include respond-between(sm, md) {
+    height: 457px;
+  }
+  @include respond-between(xs, sm) {
+    height: 350px;
+  }
+  @include respond-below(xs) {
+    height: 300px;
+  }
+
+}
+
+
+.grid-btn { 
+  width: 100%;
+  height: 150px; 
+
+  @include respond-between(md, lg) {
+      height: 120px;
+  }
+  @include respond-between(sm, md) {
+    height: 100px;
+  }
+  @include respond-between(xs, sm) {
+    height: 80px;
+  }
+  @include respond-below(xs) {
+    height: 70px;
+  }
+
+}
+
+
+  

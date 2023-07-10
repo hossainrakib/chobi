@@ -1,0 +1,122 @@
+.team-area{
+    .team-wrapper{
+        .single-team{
+            .team-image{
+                img{
+
+                }
+                .team-action{
+                    bottom: -28%;
+                    visibility: hidden;
+                    transform: translateX(-50%);
+                    opacity: 0;
+                    transition: all .3s ease-in-out;
+                    .share-icon{
+                        background-color: $white-bg;
+                        .icon{
+                            a{
+                                height: 40px;
+                                width: 40px;
+                                color: $tramplate-color;
+                                font-size: 16px;
+                                background-color: $white-bg;
+                                margin: 20px;
+                                border: 1px solid $tab-bg;
+
+                                @include respond-between(md, lg) {
+                                    height: 35px;
+                                    width: 35px;
+                                    margin: 12px;
+                                    font-size: 13px;
+                                }
+                                @include respond-between(sm, md) {
+                                    height: 35px;
+                                    width: 35px;
+                                    margin: 12px;
+                                    font-size: 13px;
+                                }
+                                @include respond-between(xs, sm) {
+                                  
+                                }
+                                @include respond-below(xs) {
+                                    height: 30px;
+                                    width: 30px;
+                                    margin: 10px;
+                                    font-size: 15px;
+                                }
+
+                                &:hover {
+                                    color: $white-color;
+                                    background-color: $main-bg;
+                                }
+                                i{
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+            .team-content{
+                padding-top: 35px;
+                opacity: 0;
+                transition: all .3s ease-in-out;
+
+                @include respond-between(md, lg) {
+                    padding-top: 25px;
+                }
+                @include respond-below(md) {
+                  padding-top: 20px;
+                }
+                @include respond-between(xs, sm) {
+                  
+                }
+                @include respond-below(xs) {
+                  
+                }
+                .member-info{
+                    h2{
+                        @include fonts(30, 700, $tramplate-color, capitalize, 52px);
+                        cursor: pointer;
+                        @include respond-between(md, lg) {
+                            @include texts(25,50)
+
+                        }
+                        @include respond-between(sm, md) {
+                            @include texts(25,45)
+                          
+                        }
+                        @include respond-between(xs, sm) {
+                          
+                        }
+                        @include respond-below(xs) {
+                            @include texts(25,30)
+                          
+                        }
+                        
+                    }
+                }
+                .member-skils{
+                    h4{
+                        @include fonts(17, 700, $sub-title-color, capitalize, 52px);
+
+                    }
+                }
+            }
+            &:hover {
+                .team-action{
+                    visibility: visible;
+                    opacity: 1;
+                    bottom: 0;
+                }
+                .team-content{
+                    opacity: 1;
+                }
+            }
+
+        }
+        .team-active{
+        }
+    }
+}

@@ -1,0 +1,44 @@
+/*font-family*/
+@mixin font($font-size, $font-weight) {
+    font-size: $font-size + px;
+    font-weight: $font-weight;
+}
+
+/* text-size*/
+@mixin text($text-color, $text-transfrom, $line-height) {
+    color: $text-color;
+    text-transform: $text-transfrom;
+    line-height: $line-height;
+}
+/*font-text-all*/
+@mixin fonts ($font-size, $font-weight, $text-color, $text-transfrom, $line-height) {
+    font-size: $font-size + px;
+    font-weight: $font-weight;
+    color: $text-color;
+    text-transform: $text-transfrom;
+    line-height: $line-height;
+}
+
+/* font-line-height-size*/
+@mixin texts($font-size, $line-height) {
+    font-size: $font-size + px;
+    line-height: $line-height + px;
+}
+/*before after*/
+@mixin after($border-color, $height, $width, $top, $bottom , $left, $right) {
+    height: $height;
+    width: $width;
+    left: $left;
+    right: $right;
+    top: $top;
+    bottom: $bottom;
+    content: '';
+    position: absolute;
+    background-color: $border-color;
+}
+
+/**/
+/**/
+/**/
+/**/
+/**/

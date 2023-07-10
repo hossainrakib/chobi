@@ -1,0 +1,39 @@
+.preload-area{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:$main-bg;
+    bottom: 0;
+    z-index: 99999999999999999999;
+    .spinner {
+        width: 60px;
+        height: 60px;
+        background-color: $white-bg;
+        margin: 0 0 -30px -30px;
+        animation: rotateplane 1s infinite ease-in-out;
+
+        @include respond-between(xs, sm) {
+          width: 40px;
+          height: 40px;
+          margin: 0 0 -20px -20px;
+        }
+        @include respond-below(xs) {
+          width: 35px;
+          height: 35px;
+           margin: 0 0 -17px -17px;
+        }
+      }
+       
+       
+      @keyframes rotateplane {
+        0% {
+          transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        }
+         50% {
+          transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        }
+         100% {
+          transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        }
+      }
+}

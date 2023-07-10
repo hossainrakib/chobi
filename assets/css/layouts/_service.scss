@@ -1,0 +1,115 @@
+.service-area{
+    background-color: $main-bg;
+    padding: 150px 0px 250px 0;
+    @include respond-between(md, lg) {
+         padding: 100px 0px 200px 0;
+
+    }
+    @include respond-between(sm, md) {
+        padding: 70px 0px 170px 0;
+      
+    }
+    @include respond-between(xs, sm) {
+        padding: 50px 0px 150px 0;
+      
+    }
+    @include respond-below(xs) {
+        padding: 40px 0px 130px 0;
+      
+    }
+    .service-active{
+        .slick-list{
+            padding: 0 !important;
+        }
+        ul.slick-dots{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: -30%;
+            li{
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                margin: 0 5px;
+
+                @include respond-between(xs, sm) {
+                    height: 15px;
+                    width: 15px;
+                }
+                @include respond-below(xs) {
+                    height: 10px;
+                    width: 10px;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+                &.slick-active{
+                    background-color: $white-bg;
+
+                }
+                button{
+                    display: none;
+                }
+            }
+        }
+    }
+    .single-service{
+        padding: 150px 50px;
+
+        @include respond-between(md, lg) {
+            padding: 100px 30px
+        }
+        @include respond-between(sm, md) {
+            padding: 70px 30px
+          
+        }
+        @include respond-between(xs, sm) {
+            padding: 50px 20px
+          
+        }
+        @include respond-below(xs) {
+            padding: 40px 40px
+          
+        }
+        .service-num{
+            h3{
+                @include fonts(32, 600, $white-color, uppercase, 40px);
+                
+                @include respond-between(xs, sm) {
+                    @include texts(25, 35);
+                }
+                @include respond-below(xs) {
+                    @include texts(22, 30);
+                  
+                }
+            }
+        }
+        .service-title{
+            h2{
+                @include fonts(32, 600, $white-color, uppercase, 40px);
+
+                @include respond-between(xs, sm) {
+                    @include texts(25, 35);
+                }
+                @include respond-below(xs) {
+                    @include texts(22, 30);
+                  
+                }
+            }
+        }
+        .service-icon{
+            @include respond-below(xs) {
+                right: 10% !important;
+              
+            }
+            .icon{
+                    transform: rotate(-30deg);
+
+                i{
+                    font-size: 25px;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.testimonials-area{
+    .single-testimonials{
+        .testimonials-profile{
+            .image{
+                border-radius: 50%;
+
+                img{
+                    @include respond-between(xs, sm) {
+                        height: 100px !important;
+                        width: 100px !important;
+                    }
+                    @include respond-below(xs) {
+                        height: 80px !important;
+                        width: 80px !important;
+      
+                      }
+                }
+            }
+        }
+    }
+}
